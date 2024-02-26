@@ -20,6 +20,15 @@ def polynomial2(x):
     """
     return np.cos(2*x) * x ** 3
 
+def find_roots(polynomial):
+    """
+    Finds the roots of a polynomial equation
+    :param polynomial: The polynomial equation
+    :return: List of roots
+    """
+    roots = fsolve(polynomial, [0])
+    return roots
+
 
 def intersection(polynomial1, polynomial2):
     """
@@ -41,6 +50,11 @@ def main():
     """
     Prints intersection point of the functions
     """
+    roots_poly1 = find_roots(polynomial1)
+    roots_poly2 = find_roots(polynomial2)
+    print("Roots of polynomial1:", roots_poly1)
+    print("Roots of polynomial2:", roots_poly2)
+
     intersection_point = intersection(polynomial1, polynomial2)
     if polynomial1(intersection_point) == polynomial2(intersection_point):
         print(f"The polynomials intersect at point ({intersection_point}, {polynomial1(intersection_point)})")
