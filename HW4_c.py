@@ -39,12 +39,18 @@ def solve_matrices(matrix, identity):
         raise ValueError("Matrix size must be 3x3 or 4x4")
     return roots
 
+def main():
+    """
+    Finds the Roots of the two matrices.
+    Uses NumPy for the 3x3 Matrix
+    Uses SciPy for the 4x4 Matrix
+    """
+    roots_3x3_numpy = solve_matrices(matrix_3x3, identity_3x3)
+    roots_4x4_scipy = solve_matrices(matrix_4x4, identity_4x4)
+    print("Roots of the 3x3 matrix using NumPy:")
+    print(roots_3x3_numpy)
+    print("\nRoots of the 4x4 matrix using SciPy:")
+    print(roots_4x4_scipy)
 
-roots_3x3_numpy = solve_matrices(matrix_3x3, identity_3x3)
-roots_4x4_scipy = solve_matrices(matrix_4x4, identity_4x4)
-
-
-print("Roots of the 3x3 matrix using NumPy:")
-print(roots_3x3_numpy)
-print("\nRoots of the 4x4 matrix using SciPy:")
-print(roots_4x4_scipy)
+if __name__ == "__main__":
+    main()

@@ -77,7 +77,7 @@ axs[1, 1].set_xlabel('x')
 axs[1, 1].set_ylabel('Cumulative Probability')
 axs[1, 1].legend()
 axs[1, 1].set_xlim(150, 200)
-#See note on lines 56 and 57
+#See note on lines 58 and 59
 axs[1, 1].annotate(f'{chr(966)}(x) = {y_value_mu_2sigma_pdf2:.3f}', xy=(x_values[idx_mu_2sigma_pdf2], y_value_mu_2sigma_pdf2),
                    xytext=(x_values[idx_mu_2sigma_pdf2] - 20, 0.8),
                    arrowprops=dict(facecolor='black', arrowstyle='->'), fontsize=10)
